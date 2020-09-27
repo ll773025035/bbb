@@ -8,7 +8,7 @@ import random
 import re
 
 from tools.data import random_tool
-from tools.data.make_info import make_info
+from tools.data.make_info import make_info, colors, sizes
 import jsonpath
 
 from tools.data.random_tool import random_card
@@ -76,6 +76,10 @@ def replace_data(s):
         value = make_info()["身份证号"]
     elif (s_l[1].find("银行卡号") != -1):
         value =random_card()
+    elif (s_l[1].find("颜色") != -1):
+        value = colors()
+    elif (s_l[1].find("尺寸") != -1):
+        value = sizes()
     else:
         value = None
     return value

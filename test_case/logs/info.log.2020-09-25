@@ -1,0 +1,1016 @@
+2020-09-24 16:38:12,055 - tools.report.log_tool - INFO - ----请求用时: 125.51 秒数
+2020-09-24 16:38:12,055 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-24 16:38:12,056 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 08:38:15 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAwOTM4NDk1NTkxLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-24 16:38:12,093 - tools.report.log_tool - INFO - ----请求用时: 31.788 秒数
+2020-09-24 16:38:12,094 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/addProd
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAwOTM4NDk1NTkxLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 138
+Content-Type: application/json
+
+b'{"brand": "aaa", "colors": ["string"], "price": 2497, "productCode": "42980640", "productName": "aaa", "sizes": ["string"], "type": "aaa"}'
+2020-09-24 16:38:12,094 - tools.report.log_tool - INFO - ---------------response----------------
+500
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 08:38:15 GMT
+Connection: close
+
+{"timestamp":"2020-09-24T08:38:15.626+0000","status":500,"error":"Internal Server Error","message":"\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1\n### The error may involve com.guoyasoft.mapper.TProdSkuMapper.insertList-Inline\n### The error occurred while setting parameters\n### SQL: insert into t_prod_sku     (product_code,sku_code,sku_name,sku_price,color,size)     values              (       ?,       ?,       ?,       ?,       ?,       ?       )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1\n; ]; Data truncation: Data too long for column 'sku_code' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1","path":"/product/addProd"}
+2020-09-24 16:44:15,250 - tools.report.log_tool - INFO - ----请求用时: 159.551 秒数
+2020-09-24 16:44:15,251 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-24 16:44:15,251 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 08:44:18 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAwOTM4ODU4Nzg3LCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-24 16:44:15,287 - tools.report.log_tool - INFO - ----请求用时: 27.891 秒数
+2020-09-24 16:44:15,288 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/addProd
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAwOTM4ODU4Nzg3LCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 164
+Content-Type: application/json
+
+b'{"brand": "\\u5c0f\\u7c73", "colors": ["string"], "price": 4654, "productCode": "071593", "productName": "\\u5c0f\\u7c73", "sizes": ["32G512G"], "type": "\\u624b\\u673a"}'
+2020-09-24 16:44:15,288 - tools.report.log_tool - INFO - ---------------response----------------
+500
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 08:44:18 GMT
+Connection: close
+
+{"timestamp":"2020-09-24T08:44:18.823+0000","status":500,"error":"Internal Server Error","message":"\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1\n### The error may involve com.guoyasoft.mapper.TProdSkuMapper.insertList-Inline\n### The error occurred while setting parameters\n### SQL: insert into t_prod_sku     (product_code,sku_code,sku_name,sku_price,color,size)     values              (       ?,       ?,       ?,       ?,       ?,       ?       )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1\n; ]; Data truncation: Data too long for column 'sku_code' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1","path":"/product/addProd"}
+2020-09-24 16:44:15,289 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  创建产品成功
+2020-09-24 16:44:15,405 - tools.report.log_tool - INFO - ----请求用时: 23.502 秒数
+2020-09-24 16:44:15,406 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/soldOut
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAwOTM4ODU4Nzg3LCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 18
+Content-Type: application/x-www-form-urlencoded
+
+productCode=071593
+2020-09-24 16:44:15,406 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 08:44:18 GMT
+
+{"code":2000,"message":"产品更新成功1条；商品更新0条。","data":""}
+2020-09-24 16:44:15,438 - tools.report.log_tool - INFO - ----请求用时: 25.31 秒数
+2020-09-24 16:44:15,438 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/toPreSale
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAwOTM4ODU4Nzg3LCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 18
+Content-Type: application/x-www-form-urlencoded
+
+productCode=071593
+2020-09-24 16:44:15,438 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 08:44:18 GMT
+
+{"code":2000,"message":"产品更新成功1条；商品更新0条。","data":""}
+2020-09-24 16:44:15,466 - tools.report.log_tool - INFO - ----请求用时: 22.132 秒数
+2020-09-24 16:44:15,467 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/getSkuByProdCode?prodCode=YSL008
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+None
+2020-09-24 16:44:15,512 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 08:44:18 GMT
+
+{"code":9999,"data":"","message":"没有带上token"}
+2020-09-24 18:23:13,750 - tools.report.log_tool - INFO - ----请求用时: 264.413 秒数
+2020-09-24 18:23:13,767 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-24 18:23:13,768 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 10:23:17 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAwOTQ0Nzk3MjcxLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-24 18:23:13,791 - tools.report.log_tool - INFO - ----请求用时: 14.575 秒数
+2020-09-24 18:23:13,791 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/getSkuByProdCode?prodCode=YSL008
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+None
+2020-09-24 18:23:13,795 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 10:23:17 GMT
+
+{"code":9999,"data":"","message":"没有带上token"}
+2020-09-24 18:23:20,649 - tools.report.log_tool - INFO - ----请求用时: 42.927 秒数
+2020-09-24 18:23:20,650 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-24 18:23:20,650 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 10:23:24 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAwOTQ0ODA0MTU1LCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-24 18:23:20,673 - tools.report.log_tool - INFO - ----请求用时: 17.429 秒数
+2020-09-24 18:23:20,673 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/toPreSale
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAwOTQ0ODA0MTU1LCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 25
+Content-Type: application/x-www-form-urlencoded
+
+productCode=%24%7Bcode%7D
+2020-09-24 18:23:20,673 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Thu, 24 Sep 2020 10:23:24 GMT
+
+{"code":9999,"message":"产品编码不存在","data":""}
+2020-09-25 15:52:52,358 - tools.report.log_tool - INFO - ----请求用时: 121.758 秒数
+2020-09-25 15:52:52,369 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-25 15:52:52,370 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 07:52:57 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAxMDIyMTc3MzExLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-25 15:52:52,409 - tools.report.log_tool - INFO - ----请求用时: 31.209 秒数
+2020-09-25 15:52:52,410 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/addProd
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAxMDIyMTc3MzExLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 138
+Content-Type: application/json
+
+b'{"brand": "aaa", "colors": ["string"], "price": 4358, "productCode": "11030146", "productName": "aaa", "sizes": ["string"], "type": "aaa"}'
+2020-09-25 15:52:52,410 - tools.report.log_tool - INFO - ---------------response----------------
+500
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 07:52:57 GMT
+Connection: close
+
+{"timestamp":"2020-09-25T07:52:57.361+0000","status":500,"error":"Internal Server Error","message":"\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1\n### The error may involve com.guoyasoft.mapper.TProdSkuMapper.insertList-Inline\n### The error occurred while setting parameters\n### SQL: insert into t_prod_sku     (product_code,sku_code,sku_name,sku_price,color,size)     values              (       ?,       ?,       ?,       ?,       ?,       ?       )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1\n; ]; Data truncation: Data too long for column 'sku_code' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1","path":"/product/addProd"}
+2020-09-25 15:54:28,047 - tools.report.log_tool - INFO - ----请求用时: 125.007 秒数
+2020-09-25 15:54:28,047 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-25 15:54:28,048 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 07:54:32 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAxMDIyMjcyOTk2LCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-25 15:54:28,088 - tools.report.log_tool - INFO - ----请求用时: 29.194 秒数
+2020-09-25 15:54:28,088 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/product/addProd
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAxMDIyMjcyOTk2LCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 140
+Content-Type: application/json
+
+b'{"brand": "aaa", "colors": ["string"], "price": 4142, "productCode": "5885370576", "productName": "aaa", "sizes": ["string"], "type": "aaa"}'
+2020-09-25 15:54:28,088 - tools.report.log_tool - INFO - ---------------response----------------
+500
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 07:54:32 GMT
+Connection: close
+
+{"timestamp":"2020-09-25T07:54:33.041+0000","status":500,"error":"Internal Server Error","message":"\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1\n### The error may involve com.guoyasoft.mapper.TProdSkuMapper.insertList-Inline\n### The error occurred while setting parameters\n### SQL: insert into t_prod_sku     (product_code,sku_code,sku_name,sku_price,color,size)     values              (       ?,       ?,       ?,       ?,       ?,       ?       )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1\n; ]; Data truncation: Data too long for column 'sku_code' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'sku_code' at row 1","path":"/product/addProd"}
+2020-09-25 19:13:22,241 - tools.report.log_tool - INFO - ----请求用时: 173.805 秒数
+2020-09-25 19:13:22,252 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-25 19:13:22,253 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:22 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAxMDM0MjAyMjUyLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-25 19:13:22,278 - tools.report.log_tool - INFO - ----请求用时: 20.674 秒数
+2020-09-25 19:13:22,279 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/signup
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 91
+Content-Type: application/json
+
+b'{"phone": "13289029291", "pwd": "xcvsw45619", "rePwd": "xcvsw45619", "userName": "fasec85"}'
+2020-09-25 19:13:22,279 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:22 GMT
+
+{"code":9999,"message":"该用户名已存在","data":""}
+2020-09-25 19:13:22,280 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  2000
+2020-09-25 19:13:22,382 - tools.report.log_tool - INFO - ----请求用时: 26.467 秒数
+2020-09-25 19:13:22,382 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 44
+Content-Type: application/json
+
+b'{"pwd": "xcvsw45619", "userName": "fasec85"}'
+2020-09-25 19:13:22,382 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:22 GMT
+
+{"code":9999,"message":"登录失败,密码错误","data":""}
+2020-09-25 19:13:22,384 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功
+2020-09-25 19:13:35,759 - tools.report.log_tool - INFO - ----请求用时: 123.907 秒数
+2020-09-25 19:13:35,760 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-25 19:13:35,760 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAxMDM0MjE1NzcwLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-25 19:13:35,787 - tools.report.log_tool - INFO - ----请求用时: 20.954 秒数
+2020-09-25 19:13:35,787 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/signup
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 86
+Content-Type: application/json
+
+b'{"phone": "18713671328", "pwd": "xcvsw762", "rePwd": "xcvsw762", "userName": "fasec5"}'
+2020-09-25 19:13:35,788 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":9999,"message":"该用户名已存在","data":""}
+2020-09-25 19:13:35,788 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  2000
+2020-09-25 19:13:35,941 - tools.report.log_tool - INFO - ----请求用时: 29.729 秒数
+2020-09-25 19:13:35,941 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 41
+Content-Type: application/json
+
+b'{"pwd": "xcvsw762", "userName": "fasec5"}'
+2020-09-25 19:13:35,941 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":9999,"message":"登录失败,密码错误","data":""}
+2020-09-25 19:13:35,943 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功
+2020-09-25 19:13:36,020 - tools.report.log_tool - INFO - ----请求用时: 46.111 秒数
+2020-09-25 19:13:36,021 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/recharge
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 48
+Content-Type: application/json
+
+b'{"accountName": "fasec5", "changeMoney": 652206}'
+2020-09-25 19:13:36,021 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"充值成功;账户余额652206分","data":""}
+2020-09-25 19:13:36,068 - tools.report.log_tool - INFO - ----请求用时: 26.95 秒数
+2020-09-25 19:13:36,069 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/getAccInfo?accountName=fasec5
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+None
+2020-09-25 19:13:36,069 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"查询成功","data":{"accoutId":16962,"accountName":"fasec5","cstId":16972,"balance":652206,"status":0,"createTime":"2020-09-23T01:09:26.000+0000","updateTime":"2020-09-23T01:09:26.000+0000","operateUserId":null}}
+2020-09-25 19:13:36,150 - tools.report.log_tool - INFO - ----请求用时: 63.928 秒数
+2020-09-25 19:13:36,150 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/getBills?accountName=fasec5
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+None
+2020-09-25 19:13:36,151 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"查询成功","data":[{"bookId":16962,"amout":652206,"status":0,"createTime":"2020-09-25T03:13:36.000+0000","updateTime":"2020-09-25T03:13:36.000+0000","operatorUserId":null,"busiCode":1}]}
+2020-09-25 19:13:36,210 - tools.report.log_tool - INFO - ----请求用时: 48.941 秒数
+2020-09-25 19:13:36,210 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/charge
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 47
+Content-Type: application/json
+
+b'{"accountName": "fasec5", "changeMoney": 66666}'
+2020-09-25 19:13:36,211 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"扣款成功,扣款金额:66666分;剩余金额:585540分。","data":""}
+2020-09-25 19:13:36,250 - tools.report.log_tool - INFO - ----请求用时: 26.905 秒数
+2020-09-25 19:13:36,251 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/getAccInfo?accountName=fasec5
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+None
+2020-09-25 19:13:36,252 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"查询成功","data":{"accoutId":16962,"accountName":"fasec5","cstId":16972,"balance":585540,"status":0,"createTime":"2020-09-23T01:09:26.000+0000","updateTime":"2020-09-23T01:09:26.000+0000","operateUserId":null}}
+2020-09-25 19:13:36,307 - tools.report.log_tool - INFO - ----请求用时: 38.416 秒数
+2020-09-25 19:13:36,307 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/getBills?accountName=fasec5
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+None
+2020-09-25 19:13:36,307 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"查询成功","data":[{"bookId":16962,"amout":652206,"status":0,"createTime":"2020-09-25T03:13:36.000+0000","updateTime":"2020-09-25T03:13:36.000+0000","operatorUserId":null,"busiCode":1},{"bookId":16962,"amout":-66666,"status":0,"createTime":"2020-09-25T03:13:36.000+0000","updateTime":"2020-09-25T03:13:36.000+0000","operatorUserId":null,"busiCode":3}]}
+2020-09-25 19:13:36,363 - tools.report.log_tool - INFO - ----请求用时: 45.27 秒数
+2020-09-25 19:13:36,363 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/withdraw
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 74
+Content-Type: application/json
+
+b'{"accountName": "fasec5", "cardNo": "2828447252770", "changeMoney": 88888}'
+2020-09-25 19:13:36,363 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"提现成功,提现金额:88888分;剩余金额:496652分。","data":""}
+2020-09-25 19:13:36,403 - tools.report.log_tool - INFO - ----请求用时: 32.96 秒数
+2020-09-25 19:13:36,403 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/getAccInfo?accountName=fasec5
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+None
+2020-09-25 19:13:36,404 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"查询成功","data":{"accoutId":16962,"accountName":"fasec5","cstId":16972,"balance":496652,"status":0,"createTime":"2020-09-23T01:09:26.000+0000","updateTime":"2020-09-23T01:09:26.000+0000","operateUserId":null}}
+2020-09-25 19:13:36,454 - tools.report.log_tool - INFO - ----请求用时: 41.033 秒数
+2020-09-25 19:13:36,454 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/getBills?accountName=fasec5
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+None
+2020-09-25 19:13:36,455 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"查询成功","data":[{"bookId":16962,"amout":652206,"status":0,"createTime":"2020-09-25T03:13:36.000+0000","updateTime":"2020-09-25T03:13:36.000+0000","operatorUserId":null,"busiCode":1},{"bookId":16962,"amout":-66666,"status":0,"createTime":"2020-09-25T03:13:36.000+0000","updateTime":"2020-09-25T03:13:36.000+0000","operatorUserId":null,"busiCode":3},{"bookId":16962,"amout":-88888,"status":0,"createTime":"2020-09-25T03:13:36.000+0000","updateTime":"2020-09-25T03:13:36.000+0000","operatorUserId":null,"busiCode":2}]}
+2020-09-25 19:13:36,502 - tools.report.log_tool - INFO - ----请求用时: 38.096 秒数
+2020-09-25 19:13:36,503 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/accLock
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 18
+Content-Type: application/x-www-form-urlencoded
+
+accountName=fasec5
+2020-09-25 19:13:36,503 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"账户冻结成功","data":""}
+2020-09-25 19:13:36,540 - tools.report.log_tool - INFO - ----请求用时: 23.892 秒数
+2020-09-25 19:13:36,540 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/recharge
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 48
+Content-Type: application/json
+
+b'{"accountName": "fasec5", "changeMoney": 122514}'
+2020-09-25 19:13:36,540 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":9999,"message":"该账户正处在冻结状态，无法充值。","data":""}
+2020-09-25 19:13:36,576 - tools.report.log_tool - INFO - ----请求用时: 25.421 秒数
+2020-09-25 19:13:36,576 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/withdraw
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 77
+Content-Type: application/json
+
+b'{"accountName": "fasec5", "cardNo": "2513042946800185", "changeMoney": 88888}'
+2020-09-25 19:13:36,577 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":9999,"message":"该账户正处在冻结状态，无法提现。","data":""}
+2020-09-25 19:13:36,639 - tools.report.log_tool - INFO - ----请求用时: 46.389 秒数
+2020-09-25 19:13:36,640 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/charge
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 47
+Content-Type: application/json
+
+b'{"accountName": "fasec5", "changeMoney": 66666}'
+2020-09-25 19:13:36,640 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"扣款成功,扣款金额:66666分;剩余金额:429986分。","data":""}
+2020-09-25 19:13:36,695 - tools.report.log_tool - INFO - ----请求用时: 45.221 秒数
+2020-09-25 19:13:36,695 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/accUnLock
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 18
+Content-Type: application/x-www-form-urlencoded
+
+accountName=fasec5
+2020-09-25 19:13:36,696 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:35 GMT
+
+{"code":2000,"message":"账户解冻成功","data":""}
+2020-09-25 19:13:36,763 - tools.report.log_tool - INFO - ----请求用时: 52.133 秒数
+2020-09-25 19:13:36,763 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/recharge
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 48
+Content-Type: application/json
+
+b'{"accountName": "fasec5", "changeMoney": 710351}'
+2020-09-25 19:13:36,763 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:36 GMT
+
+{"code":2000,"message":"充值成功;账户余额1140337分","data":""}
+2020-09-25 19:13:36,824 - tools.report.log_tool - INFO - ----请求用时: 53.056 秒数
+2020-09-25 19:13:36,824 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/withdraw
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 77
+Content-Type: application/json
+
+b'{"accountName": "fasec5", "cardNo": "2737697721874554", "changeMoney": 88888}'
+2020-09-25 19:13:36,825 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:36 GMT
+
+{"code":2000,"message":"提现成功,提现金额:88888分;剩余金额:1051449分。","data":""}
+2020-09-25 19:13:43,433 - tools.report.log_tool - ERROR - Exception url: http://qa.yansl.com:8084/user/changepwd
+2020-09-25 19:13:43,433 - tools.report.log_tool - ERROR - HTTPConnectionPool(host='qa.yansl.com', port=8084): Max retries exceeded with url: /user/changepwd (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021A92F50080>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+2020-09-25 19:13:43,585 - tools.report.log_tool - INFO - ----请求用时: 113.875 秒数
+2020-09-25 19:13:43,585 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 41
+Content-Type: application/json
+
+b'{"pwd": "asfg312", "userName": "fasec85"}'
+2020-09-25 19:13:43,586 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":9999,"message":"登录失败,密码错误","data":""}
+2020-09-25 19:13:43,586 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功
+2020-09-25 19:13:43,782 - tools.report.log_tool - INFO - ----请求用时: 38.202 秒数
+2020-09-25 19:13:43,782 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-25 19:13:43,783 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAxMDM0MjIzNzkzLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-25 19:13:43,822 - tools.report.log_tool - INFO - ----请求用时: 33.801 秒数
+2020-09-25 19:13:43,822 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/signup
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 87
+Content-Type: application/json
+
+b'{"phone": "15910347901", "pwd": "xcvsw79", "rePwd": "xcvsw79", "userName": "fasec8389"}'
+2020-09-25 19:13:43,823 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":2000,"message":"注册成功；用户ID:17931","data":{"userName":"fasec8389","accoutId":17931,"cstId":17941,"userId":17931}}
+2020-09-25 19:13:43,881 - tools.report.log_tool - INFO - ----请求用时: 36.102 秒数
+2020-09-25 19:13:43,881 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 43
+Content-Type: application/json
+
+b'{"pwd": "xcvsw79", "userName": "fasec8389"}'
+2020-09-25 19:13:43,881 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAxMDM0MjIzODkxLCJ1c2VySWQiOjE3OTMxLCJ1c2VyTmFtZSI6ImZhc2VjODM4OSJ9","userName":"fasec8389"}}
+2020-09-25 19:13:43,934 - tools.report.log_tool - INFO - ----请求用时: 46.402 秒数
+2020-09-25 19:13:43,935 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/user/lock
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAxMDM0MjIzODkxLCJ1c2VySWQiOjE3OTMxLCJ1c2VyTmFtZSI6ImZhc2VjODM4OSJ9
+Content-Length: 18
+Content-Type: application/x-www-form-urlencoded
+
+userName=fasec8389
+2020-09-25 19:13:43,935 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":2000,"message":"冻结成功","data":""}
+2020-09-25 19:13:44,058 - tools.report.log_tool - INFO - ----请求用时: 115.503 秒数
+2020-09-25 19:13:44,058 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 43
+Content-Type: application/json
+
+b'{"pwd": "xcvsw79", "userName": "fasec8389"}'
+2020-09-25 19:13:44,058 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":9999,"message":"登录失败,帐号被冻结","data":""}
+2020-09-25 19:13:44,099 - tools.report.log_tool - INFO - ----请求用时: 28.388 秒数
+2020-09-25 19:13:44,099 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/accUnLock
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 21
+Content-Type: application/x-www-form-urlencoded
+
+accountName=fasec8389
+2020-09-25 19:13:44,100 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":9999,"message":"已被解冻。","data":""}
+2020-09-25 19:13:44,141 - tools.report.log_tool - INFO - ----请求用时: 33.654 秒数
+2020-09-25 19:13:44,142 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 43
+Content-Type: application/json
+
+b'{"pwd": "xcvsw79", "userName": "fasec8389"}'
+2020-09-25 19:13:44,142 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":9999,"message":"登录失败,帐号被冻结","data":""}
+2020-09-25 19:13:44,219 - tools.report.log_tool - INFO - ----请求用时: 69.476 秒数
+2020-09-25 19:13:44,220 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/user/unLock
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAxMDM0MjIzODkxLCJ1c2VySWQiOjE3OTMxLCJ1c2VyTmFtZSI6ImZhc2VjODM4OSJ9
+Content-Length: 18
+Content-Type: application/x-www-form-urlencoded
+
+userName=fasec8389
+2020-09-25 19:13:44,220 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":2000,"message":"解冻成功","data":""}
+2020-09-25 19:13:44,300 - tools.report.log_tool - INFO - ----请求用时: 54.408 秒数
+2020-09-25 19:13:44,301 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 43
+Content-Type: application/json
+
+b'{"pwd": "xcvsw79", "userName": "fasec8389"}'
+2020-09-25 19:13:44,301 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:13:43 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAxMDM0MjI0MzAwLCJ1c2VySWQiOjE3OTMxLCJ1c2VyTmFtZSI6ImZhc2VjODM4OSJ9","userName":"fasec8389"}}
+2020-09-25 19:22:44,333 - tools.report.log_tool - INFO - ----请求用时: 123.859 秒数
+2020-09-25 19:22:44,333 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 39
+Content-Type: application/json
+
+b'{"pwd": "abc123", "userName": "qyr946"}'
+2020-09-25 19:22:44,334 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":2000,"message":"登录成功","data":{"token":"eyJ0aW1lT3V0IjoxNjAxMDM0NzY0MzQzLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==","userName":"qyr946"}}
+2020-09-25 19:22:44,361 - tools.report.log_tool - INFO - ----请求用时: 21.745 秒数
+2020-09-25 19:22:44,361 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/signup
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 86
+Content-Type: application/json
+
+b'{"phone": "14528011509", "pwd": "xcvsw430", "rePwd": "xcvsw430", "userName": "fasec4"}'
+2020-09-25 19:22:44,361 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":9999,"message":"该用户名已存在","data":""}
+2020-09-25 19:22:44,362 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  2000
+2020-09-25 19:22:44,503 - tools.report.log_tool - INFO - ----请求用时: 32.563 秒数
+2020-09-25 19:22:44,503 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 41
+Content-Type: application/json
+
+b'{"pwd": "xcvsw430", "userName": "fasec4"}'
+2020-09-25 19:22:44,504 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":9999,"message":"登录失败,密码错误","data":""}
+2020-09-25 19:22:44,506 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功
+2020-09-25 19:22:44,584 - tools.report.log_tool - INFO - ----请求用时: 53.606 秒数
+2020-09-25 19:22:44,584 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/user/lock
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAxMDM0NzY0MzQzLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 15
+Content-Type: application/x-www-form-urlencoded
+
+userName=fasec4
+2020-09-25 19:22:44,584 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":2000,"message":"冻结成功","data":""}
+2020-09-25 19:22:44,628 - tools.report.log_tool - INFO - ----请求用时: 34.488 秒数
+2020-09-25 19:22:44,628 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 41
+Content-Type: application/json
+
+b'{"pwd": "xcvsw430", "userName": "fasec4"}'
+2020-09-25 19:22:44,628 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":9999,"message":"登录失败,帐号被冻结","data":""}
+2020-09-25 19:22:44,691 - tools.report.log_tool - INFO - ----请求用时: 54.326 秒数
+2020-09-25 19:22:44,692 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/acc/accUnLock
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 18
+Content-Type: application/x-www-form-urlencoded
+
+accountName=fasec4
+2020-09-25 19:22:44,692 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":9999,"message":"已被解冻。","data":""}
+2020-09-25 19:22:44,750 - tools.report.log_tool - INFO - ----请求用时: 47.156 秒数
+2020-09-25 19:22:44,751 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 41
+Content-Type: application/json
+
+b'{"pwd": "xcvsw430", "userName": "fasec4"}'
+2020-09-25 19:22:44,751 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":9999,"message":"登录失败,帐号被冻结","data":""}
+2020-09-25 19:22:44,799 - tools.report.log_tool - INFO - ----请求用时: 41.33 秒数
+2020-09-25 19:22:44,800 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/user/unLock
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+token: eyJ0aW1lT3V0IjoxNjAxMDM0NzY0MzQzLCJ1c2VySWQiOjk5OCwidXNlck5hbWUiOiJxeXI5NDYifQ==
+Content-Length: 15
+Content-Type: application/x-www-form-urlencoded
+
+userName=fasec4
+2020-09-25 19:22:44,800 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":2000,"message":"解冻成功","data":""}
+2020-09-25 19:22:44,839 - tools.report.log_tool - INFO - ----请求用时: 28.584 秒数
+2020-09-25 19:22:44,839 - tools.report.log_tool - INFO - -------------------request-------------
+http://qa.yansl.com:8084/login
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 41
+Content-Type: application/json
+
+b'{"pwd": "xcvsw430", "userName": "fasec4"}'
+2020-09-25 19:22:44,840 - tools.report.log_tool - INFO - ---------------response----------------
+200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 25 Sep 2020 11:22:44 GMT
+
+{"code":9999,"message":"登录失败,密码错误","data":""}
+2020-09-25 19:22:44,841 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功

@@ -1,0 +1,10 @@
+2020-09-25 19:13:22,280 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  2000
+2020-09-25 19:13:22,384 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功
+2020-09-25 19:13:35,788 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  2000
+2020-09-25 19:13:35,943 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功
+2020-09-25 19:13:43,433 - tools.report.log_tool - ERROR - Exception url: http://qa.yansl.com:8084/user/changepwd
+2020-09-25 19:13:43,433 - tools.report.log_tool - ERROR - HTTPConnectionPool(host='qa.yansl.com', port=8084): Max retries exceeded with url: /user/changepwd (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021A92F50080>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+2020-09-25 19:13:43,586 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功
+2020-09-25 19:22:44,362 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  2000
+2020-09-25 19:22:44,506 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功
+2020-09-25 19:22:44,841 - tools.report.log_tool - ERROR - 不包含期望值, 期望值 是  登录成功

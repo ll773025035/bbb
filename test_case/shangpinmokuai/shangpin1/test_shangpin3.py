@@ -12,9 +12,12 @@ from tools.api import request_tool
 自动生成 身份证号
 '''
 json_path = [{"token":"$['data']['token']"}]
-
 def test_addProd(pub_data):
+    pub_data["colors"] = "自动生成 颜色"
     pub_data["code"] = "自动生成 字符串 3,10 数字"
+    pub_data["sizes"] = "自动生成 尺寸"
+    bbb=["匡威","耐克","LV","小米","华为"]
+    aaa = random.choices(bbb)[0]
     method = "POST"  #请求方法，全部大写
     feature = "商品模块"  # allure报告中一级分类
     story = '增加产品'  # allure报告中二级分类
@@ -22,17 +25,17 @@ def test_addProd(pub_data):
     uri = "/product/addProd"  # 接口地址
     headers = {"token":"${token}"}
     status_code = 200  # 响应状态码
-    expect = "创建产品成功"  # 预期结果
+    expect = ""  # 预期结果
     json_data='''{
-  "brand": "小米",
+  "brand": "aaa",
   "colors": [
-    "string"
+    "${colors}"
   ],
   "price": "自动生成 数字 99,8888",
   "productCode": "${code}",
-  "productName": "小米",
+  "productName": "aaa",
   "sizes": [
-    "32G512G"
+    "${sizes}"
   ],
   "type": "手机"
 }'''
@@ -41,49 +44,48 @@ def test_addProd(pub_data):
     # method,pub_data和url为必传字段
     r = request_tool.request(method=method,url=uri,pub_data=pub_data,status_code=status_code,headers=headers,expect=expect,feature=feature,story=story,title=title,json_data=json_data)
 
-def test_soldOut(pub_data):
-    method = "POST"  #请求方法，全部大写
-    feature = "商品模块"  # allure报告中一级分类
-    story = '下架'  # allure报告中二级分类
-    title = "全字段正常流_1"  # allure报告中用例名字
-    uri = "/product/soldOut"  # 接口地址
-    headers = {"token":"${token}"}
-    status_code = 200  # 响应状态码
-    expect = ""  # 预期结果
-    data={'productCode': '${code}'}
-
-    # --------------------分界线，下边的不要修改-----------------------------------------
-    # method,pub_data和url为必传字段
-    r = request_tool.request(method=method,url=uri,pub_data=pub_data,status_code=status_code,headers=headers,expect=expect,feature=feature,story=story,title=title,data=data)
-
-def test_toPreSale(pub_data):
-    method = "POST"  #请求方法，全部大写
-    feature = "商品模块"  # allure报告中一级分类
-    story = '预售'  # allure报告中二级分类
-    title = "全字段正常流_1"  # allure报告中用例名字
-    uri = "/product/toPreSale"  # 接口地址
-    headers = {"token":"${token}"}
-    status_code = 200  # 响应状态码
-    expect = ""  # 预期结果
-    data={'productCode': '${code}'}
-
-    # --------------------分界线，下边的不要修改-----------------------------------------
-    # method,pub_data和url为必传字段
-    r = request_tool.request(method=method,url=uri,pub_data=pub_data,status_code=status_code,headers=headers,expect=expect,feature=feature,story=story,title=title,data=data)
-
 def test_getSkuByProdCode(pub_data):
     method = "GET"  #请求方法，全部大写
-    feature = "用户模块"  # allure报告中一级分类
-    story = '用户登录'  # allure报告中二级分类
+    feature = "商品模块"  # allure报告中一级分类
+    story = '根据产品编码查商品'  # allure报告中二级分类
     title = "全字段正常流_1"  # allure报告中用例名字
     uri = "/product/getSkuByProdCode"  # 接口地址
-    headers = {}
+    headers = {"token":"${token}"}
     status_code = 200  # 响应状态码
     expect = ""  # 预期结果
-    params={'prodCode': 'YSL008'}
+    params={'prodCode': '${code}'}
 
     # --------------------分界线，下边的不要修改-----------------------------------------
     # method,pub_data和url为必传字段
     r = request_tool.request(method=method,url=uri,pub_data=pub_data,status_code=status_code,headers=headers,expect=expect,feature=feature,story=story,title=title,params=params)
 
+def test_changePrice(pub_data):
+    method = "POST"  #请求方法，全部大写
+    feature = "商品模块"  # allure报告中一级分类
+    story = '修改商品价格'  # allure报告中二级分类
+    title = "全字段正常流_1"  # allure报告中用例名字
+    uri = "/product/changePrice"  # 接口地址
+    headers = {"token":"${token}"}
+    status_code = 200  # 响应状态码
+    expect = ""  # 预期结果
+    data={'SKU': '${code}_${colors}_${sizes}', 'price': '自动生成 数字 99,8888'}
+
+    # --------------------分界线，下边的不要修改-----------------------------------------
+    # method,pub_data和url为必传字段
+    r = request_tool.request(method=method,url=uri,pub_data=pub_data,status_code=status_code,headers=headers,expect=expect,feature=feature,story=story,title=title,data=data)
+
+def test_getSKU(pub_data):
+    method = "GET"  #请求方法，全部大写
+    feature = "商品模块"  # allure报告中一级分类
+    story = '查询单个商品'  # allure报告中二级分类
+    title = "全字段正常流_1"  # allure报告中用例名字
+    uri = "/product/getSKU"  # 接口地址
+    headers = {"token":"${token}"}
+    status_code = 200  # 响应状态码
+    expect = ""  # 预期结果
+    params={'SKU': '${code}_${colors}_${sizes}'}
+
+    # --------------------分界线，下边的不要修改-----------------------------------------
+    # method,pub_data和url为必传字段
+    r = request_tool.request(method=method,url=uri,pub_data=pub_data,status_code=status_code,headers=headers,expect=expect,feature=feature,story=story,title=title,params=params)
 

@@ -87,4 +87,12 @@ def make_info():
     info_dic['地址'] = make_addr(id_num)
     return info_dic
 
+def colors():
+    bbb = ["黑色", "白色", "红色", "金色"]
+    aaa = random.choices(bbb)[0]
+    return aaa
 
+def sizes():
+    ccc = ["5寸", "6寸", "7寸", "8寸"]
+    ddd = random.choices(ccc)[0]
+    return ddd

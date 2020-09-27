@@ -9,11 +9,13 @@ from tools.api import request_tool
 自动生成 姓名
 自动生成 手机号
 自动生成 邮箱
-自动生成 银行卡号
+自动生成 身份证号
 '''
 json_path = [{"token":"$['data']['token']"}]
 def test_addProd(pub_data):
+    pub_data["colors"] = "自动生成 颜色"
     pub_data["code"] = "自动生成 字符串 3,10 数字"
+    pub_data["sizes"] = "自动生成 尺寸"
     bbb=["匡威","耐克","LV","小米","华为"]
     aaa = random.choices(bbb)[0]
     method = "POST"  #请求方法，全部大写
@@ -27,17 +29,19 @@ def test_addProd(pub_data):
     json_data='''{
   "brand": "aaa",
   "colors": [
-    "string"
+    "${colors}"
   ],
   "price": "自动生成 数字 99,8888",
   "productCode": "${code}",
   "productName": "aaa",
   "sizes": [
-    "string"
+    "${sizes}"
   ],
-  "type": "aaa"
+  "type": "手机"
 }'''
 
     # --------------------分界线，下边的不要修改-----------------------------------------
     # method,pub_data和url为必传字段
     r = request_tool.request(method=method,url=uri,pub_data=pub_data,status_code=status_code,headers=headers,expect=expect,feature=feature,story=story,title=title,json_data=json_data)
+
+
